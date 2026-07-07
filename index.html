@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>For My Love ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- ===== SCREEN 1: LOADING ===== -->
+    <div id="screen-loading" class="screen active">
+      <div class="loading-container">
+        <div class="heart-loader">
+          <svg viewBox="0 0 100 100" width="80" height="80">
+            <path class="heart-path" d="M50 88 C20 60, 5 40, 5 25 Q5 10 20 10 Q35 10 50 25 Q65 10 80 10 Q95 10 95 25 Q95 40 50 88Z" fill="none" stroke="#ff6b9d" stroke-width="3"/>
+          </svg>
+          <div class="heart-fill"></div>
+        </div>
+        <p class="loading-text">Preparing something special for you ❤️</p>
+      </div>
+      <div id="petals-container"></div>
+      <div id="floating-hearts-container"></div>
+    </div>
+
+    <!-- ===== SCREEN 2: QUESTION 1 ===== -->
+    <div id="screen-q1" class="screen">
+      <div class="q1-container">
+        <p class="question-text">Why did you open this website?<br><span class="emph-text">Stay busy! 😤</span></p>
+        <div class="btn-group" id="q1-buttons">
+          <button class="btn btn-primary btn-sorry" data-action="sorry">❤️ Sorry</button>
+          <button class="btn btn-secondary btn-okbye" data-action="okbye">💔 Okay Bye</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN 3: QUESTION 2 ===== -->
+    <div id="screen-q2" class="screen">
+      <div class="q2-container">
+        <p class="q2-main-text">Hmm...<br>I'm still angry <span class="emph-emoji">😒</span></p>
+        <p class="q2-alt-text hidden">HOW DARE YOU!! <span class="emph-emoji">😤</span></p>
+        <div class="btn-group" id="q2-buttons">
+          <button class="btn btn-primary btn-sorry2">❤️ I'm Really Sorry</button>
+          <button class="btn btn-secondary btn-tease">😏</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN 4: HELLO BACCHU ===== -->
+    <div id="screen-hello" class="screen">
+      <div class="hello-container">
+        <h1 class="hello-title">Hello Bacchu <span class="heart-inline">❤️</span></h1>
+      </div>
+      <div class="hello-petals"></div>
+    </div>
+
+    <!-- ===== SCREEN 5: LOVE LETTER ===== -->
+    <div id="screen-letter" class="screen">
+      <div class="letter-page">
+        <div class="envelope-wrapper" id="envelope-wrapper">
+          <div class="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body">
+              <div class="envelope-heart">❤️</div>
+            </div>
+          </div>
+          <p class="envelope-hint">Click to open ❤️</p>
+        </div>
+        <div class="letter-content hidden" id="letter-content">
+          <div class="letter-paper glass">
+            <p class="letter-greeting">Hello My Bacchu ❤️,</p>
+            <p class="letter-body-text">I know sometimes I become angry.<br>Sometimes I overthink.<br>Sometimes I act childish.<br>But please know one thing...</p>
+            <p class="letter-body-text">No matter what happens,<br>I love you with all my heart.</p>
+            <p class="letter-body-text">You are my safe place.<br>You are my happiness.<br>You are my biggest smile.</p>
+            <p class="letter-body-text">I can stay angry for a little while,<br>but I can never stop loving you.<br>You are my everything.<br>I never want to lose you.</p>
+            <p class="letter-body-text">Thank you for being with me.<br>Please keep loving me forever.<br>I love you endlessly.</p>
+            <p class="letter-signoff">Forever Yours,<br><span class="letter-signature">❤️ Piyasa</span></p>
+            <div class="letter-button-wrap">
+              <button class="btn btn-primary btn-cutiee" id="btn-cutiee">Awww Cutiee ❤️</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN 5: HAPPY QUESTION ===== -->
+    <div id="screen-happy" class="screen">
+      <div class="happy-container">
+        <p class="happy-question">Are you happy now? <span class="emph-emoji">🥺</span></p>
+        <div class="btn-group" id="happy-buttons">
+          <button class="btn btn-primary btn-happy-yes">❤️ Yes</button>
+          <button class="btn btn-secondary btn-happy-no">💔 No</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN 6: COUPLE ===== -->
+    <div id="screen-couple" class="screen">
+      <div class="couple-container">
+        <p class="couple-um">U &amp; Me</p>
+        <div class="teddy-scene">
+          <div class="teddy teddy-left" id="teddy-left">
+            <div class="teddy-bear-svg" id="bear-left">
+              <svg viewBox="0 0 120 140" width="140" height="165">
+                <circle cx="35" cy="25" r="14" fill="#8B6914"/>
+                <circle cx="85" cy="25" r="14" fill="#8B6914"/>
+                <circle cx="35" cy="25" r="8" fill="#D4A574"/>
+                <circle cx="85" cy="25" r="8" fill="#D4A574"/>
+                <circle cx="60" cy="48" r="32" fill="#8B6914"/>
+                <ellipse cx="60" cy="56" rx="22" ry="16" fill="#D4A574"/>
+                <circle cx="46" cy="42" r="4.5" fill="#2C1810"/>
+                <circle cx="74" cy="42" r="4.5" fill="#2C1810"/>
+                <circle cx="47.5" cy="40.5" r="1.8" fill="#fff"/>
+                <circle cx="75.5" cy="40.5" r="1.8" fill="#fff"/>
+                <ellipse cx="60" cy="52" rx="5" ry="3.5" fill="#2C1810"/>
+                <path d="M55 56 Q60 61 65 56" fill="none" stroke="#2C1810" stroke-width="2" stroke-linecap="round"/>
+                <ellipse cx="60" cy="95" rx="30" ry="35" fill="#8B6914"/>
+                <ellipse cx="60" cy="92" rx="20" ry="24" fill="#D4A574"/>
+                <ellipse cx="22" cy="82" rx="14" ry="22" fill="#8B6914" transform="rotate(30 22 82)"/>
+                <ellipse cx="18" cy="78" rx="8" ry="14" fill="#D4A574" transform="rotate(30 18 78)"/>
+                <ellipse cx="98" cy="82" rx="14" ry="22" fill="#8B6914" transform="rotate(-30 98 82)"/>
+                <ellipse cx="102" cy="78" rx="8" ry="14" fill="#D4A574" transform="rotate(-30 102 78)"/>
+                <ellipse cx="40" cy="125" rx="16" ry="12" fill="#8B6914"/>
+                <ellipse cx="80" cy="125" rx="16" ry="12" fill="#8B6914"/>
+                <ellipse cx="40" cy="125" rx="8" ry="6" fill="#D4A574"/>
+                <ellipse cx="80" cy="125" rx="8" ry="6" fill="#D4A574"/>
+              </svg>
+            </div>
+          </div>
+          <div class="teddy teddy-right" id="teddy-right">
+            <div class="teddy-bear-svg" id="bear-right">
+              <svg viewBox="0 0 120 140" width="140" height="165">
+                <circle cx="35" cy="25" r="14" fill="#8B6914"/>
+                <circle cx="85" cy="25" r="14" fill="#8B6914"/>
+                <circle cx="35" cy="25" r="8" fill="#D4A574"/>
+                <circle cx="85" cy="25" r="8" fill="#D4A574"/>
+                <circle cx="60" cy="48" r="32" fill="#8B6914"/>
+                <ellipse cx="60" cy="56" rx="22" ry="16" fill="#D4A574"/>
+                <circle cx="46" cy="42" r="4.5" fill="#2C1810"/>
+                <circle cx="74" cy="42" r="4.5" fill="#2C1810"/>
+                <circle cx="47.5" cy="40.5" r="1.8" fill="#fff"/>
+                <circle cx="75.5" cy="40.5" r="1.8" fill="#fff"/>
+                <ellipse cx="60" cy="52" rx="5" ry="3.5" fill="#2C1810"/>
+                <path d="M55 56 Q60 61 65 56" fill="none" stroke="#2C1810" stroke-width="2" stroke-linecap="round"/>
+                <ellipse cx="60" cy="95" rx="30" ry="35" fill="#8B6914"/>
+                <ellipse cx="60" cy="92" rx="20" ry="24" fill="#D4A574"/>
+                <ellipse cx="22" cy="82" rx="14" ry="22" fill="#8B6914" transform="rotate(30 22 82)"/>
+                <ellipse cx="18" cy="78" rx="8" ry="14" fill="#D4A574" transform="rotate(30 18 78)"/>
+                <ellipse cx="98" cy="82" rx="14" ry="22" fill="#8B6914" transform="rotate(-30 98 82)"/>
+                <ellipse cx="102" cy="78" rx="8" ry="14" fill="#D4A574" transform="rotate(-30 102 78)"/>
+                <ellipse cx="40" cy="125" rx="16" ry="12" fill="#8B6914"/>
+                <ellipse cx="80" cy="125" rx="16" ry="12" fill="#8B6914"/>
+                <ellipse cx="40" cy="125" rx="8" ry="6" fill="#D4A574"/>
+                <ellipse cx="80" cy="125" rx="8" ry="6" fill="#D4A574"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div id="couple-hearts"></div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN 7: BOUQUET ===== -->
+    <div id="screen-bouquet" class="screen">
+      <div class="bouquet-container">
+        <div class="bouquet-icon">💐</div>
+        <p class="bouquet-text">For You Babu ❤️</p>
+        <div class="bouquet-love hidden" id="bouquet-love">
+          <p class="love-name-text">Love You A Lot Handsome ❤️</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN 8: FINAL CELEBRATION ===== -->
+    <div id="screen-final" class="screen">
+      <div class="final-container">
+        <div class="final-particles" id="final-particles"></div>
+        <div class="final-content">
+          <p class="final-line-1">Every love story is beautiful...</p>
+          <p class="final-line-2">But ours is my favorite. <span class="heart-inline">❤️</span></p>
+          <p class="final-line-3">Thank you for opening this little surprise.</p>
+          <p class="final-line-4">I Love You Forever Deepak <span class="heart-inline">❤️</span></p>
+          <p class="final-line-5">Okieee See Youu Cutieee <span class="heart-inline">❤️</span></p>
+          <p class="final-credit">Made with <span class="heart-inline">❤️</span> by Piyasa</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
