@@ -14,6 +14,7 @@
     happy: $('#screen-happy'),
     couple: $('#screen-couple'),
     bouquet: $('#screen-bouquet'),
+    bye: $('#screen-bye'),
     final: $('#screen-final'),
   };
 
@@ -316,12 +317,39 @@
     setTimeout(() => {
       bouquetLove.classList.remove('hidden');
 
-      // Then go to final after another 3 seconds
+      // Then go to bye after another 3 seconds
+      setTimeout(() => {
+        showScreen('bye');
+        initBye();
+      }, 3000);
+    }, 3000);
+  }
+
+  // ===== BYE QUESTION =====
+  let byeInitialized = false;
+
+  function initBye() {
+    if (byeInitialized) return;
+    byeInitialized = true;
+
+    const btnBye = $('.btn-bye-bye');
+    const btnNo = $('.btn-bye-no');
+
+    if (!btnBye || !btnNo) return;
+
+    btnNo.addEventListener('click', () => {
+      showScreen('final');
+      initFinal();
+    });
+
+    btnBye.addEventListener('click', () => {
+      btnBye.textContent = 'Ohh U Want To Go? Okay Byee 💔';
+      btnBye.className = 'btn btn-primary bye-changed';
       setTimeout(() => {
         showScreen('final');
         initFinal();
-      }, 3000);
-    }, 3000);
+      }, 1800);
+    });
   }
 
   // ===== FINAL CELEBRATION =====
