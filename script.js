@@ -362,6 +362,7 @@
     createFinalParticles();
     createConfetti();
     createSparkles();
+    createFlowerBurst();
   }
 
   function createFinalParticles() {
@@ -414,6 +415,32 @@
       sparkle.style.animationDelay = Math.random() * 5 + 's';
       sparkle.style.animationDuration = (2 + Math.random() * 3) + 's';
       container.appendChild(sparkle);
+    }
+  }
+
+  function createFlowerBurst() {
+    const container = $('#final-particles');
+    if (!container) return;
+
+    const flowers = ['🌸', '🌷', '🌹', '💐', '🌺', '🌻', '🌼', '🌿'];
+
+    for (let i = 0; i < 24; i++) {
+      const burst = document.createElement('div');
+      burst.className = 'flower-burst';
+      burst.textContent = flowers[Math.floor(Math.random() * flowers.length)];
+
+      const angle = (360 / 24) * i + Math.random() * 20;
+      const distance = 30 + Math.random() * 50;
+      const rad = (angle * Math.PI) / 180;
+      const tx = Math.cos(rad) * distance;
+      const ty = Math.sin(rad) * distance;
+
+      burst.style.setProperty('--tx', tx + 'vw');
+      burst.style.setProperty('--ty', ty + 'vh');
+      burst.style.fontSize = (20 + Math.random() * 24) + 'px';
+      burst.style.animationDelay = (0.3 + Math.random() * 0.8) + 's';
+      burst.style.animationDuration = (1.5 + Math.random() * 1) + 's';
+      container.appendChild(burst);
     }
   }
 

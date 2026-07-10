@@ -836,6 +836,31 @@ body {
   }
 }
 
+/* ===== FLOWER BURST ===== */
+.flower-burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  z-index: 2;
+  animation: flowerBurst ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes flowerBurst {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3) rotate(0deg);
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(1) rotate(360deg);
+    opacity: 0;
+  }
+}
+
 /* ===== SPARKLE ===== */
 .sparkle {
   position: absolute;
