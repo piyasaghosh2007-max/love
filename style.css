@@ -801,12 +801,22 @@ body {
   opacity: 0;
 }
 
+.final-line-sayari {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  color: #8b3a5a;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  animation: fadeInUp 1.2s ease 4s forwards;
+  opacity: 0;
+}
+
 .final-credit {
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   color: #8b3a5a;
   font-weight: 400;
   margin-top: 20px;
-  animation: fadeInUp 1s ease 4.5s forwards;
+  animation: fadeInUp 1s ease 5.5s forwards;
   opacity: 0;
 }
 
