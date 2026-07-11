@@ -288,6 +288,7 @@ body {
 }
 
 .hello-title {
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 8vw, 4.5rem);
   font-weight: 700;
   color: #d6336c;
@@ -487,8 +488,8 @@ body {
 }
 
 .letter-greeting {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.8rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
   color: #d6336c;
   margin-bottom: 20px;
 }
@@ -568,6 +569,7 @@ body {
 }
 
 .couple-um {
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 6vw, 3rem);
   font-weight: 700;
   color: #d6336c;
@@ -663,6 +665,7 @@ body {
 }
 
 .love-name-text {
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 700;
   color: #d6336c;
@@ -686,6 +689,7 @@ body {
 }
 
 .bye-question {
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.5rem, 5vw, 2.5rem);
   font-weight: 600;
   color: #4a1a2c;
@@ -758,7 +762,7 @@ body {
 }
 
 .final-line-1 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Great Vibes', cursive;
   font-size: clamp(1.5rem, 5vw, 2.5rem);
   color: #8b3a5a;
   margin-bottom: 16px;
@@ -766,7 +770,7 @@ body {
 }
 
 .final-line-2 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.8rem, 6vw, 3rem);
   font-weight: 700;
   color: #d6336c;
@@ -784,6 +788,7 @@ body {
 }
 
 .final-line-4 {
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.3rem, 4vw, 2rem);
   font-weight: 700;
   color: #d6336c;
@@ -817,8 +822,8 @@ body {
 }
 
 .sayari-text {
-  font-family: 'Dancing Script', cursive;
-  font-size: clamp(1.3rem, 4vw, 2rem);
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(1.5rem, 5vw, 2.3rem);
   color: #8b3a5a;
   line-height: 2;
   animation: fadeInUp 1s ease forwards;
@@ -843,6 +848,7 @@ body {
 }
 
 .goodbye-text {
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.8rem, 6vw, 3rem);
   font-weight: 700;
   color: #fff;
