@@ -16,6 +16,8 @@
     bouquet: $('#screen-bouquet'),
     bye: $('#screen-bye'),
     final: $('#screen-final'),
+    sayari: $('#screen-sayari'),
+    goodbye: $('#screen-goodbye'),
   };
 
   let currentScreen = 'loading';
@@ -363,6 +365,11 @@
     createConfetti();
     createSparkles();
     createFlowerBurst();
+
+    setTimeout(() => {
+      showScreen('sayari');
+      initSayari();
+    }, 7000);
   }
 
   function createFinalParticles() {
@@ -442,6 +449,32 @@
       burst.style.animationDuration = (1.5 + Math.random() * 1) + 's';
       container.appendChild(burst);
     }
+  }
+
+  // ===== SAYARI PAGE =====
+  let sayariInitialized = false;
+
+  function initSayari() {
+    if (sayariInitialized) return;
+    sayariInitialized = true;
+
+    const loveBtn = $('#btn-sayari-love');
+    if (loveBtn) {
+      loveBtn.addEventListener('click', () => {
+        showScreen('goodbye');
+        initGoodbye();
+      });
+    }
+  }
+
+  // ===== GOODBYE PAGE =====
+  let goodbyeInitialized = false;
+
+  function initGoodbye() {
+    if (goodbyeInitialized) return;
+    goodbyeInitialized = true;
+
+    createFloatingHearts('goodbye-hearts', 20);
   }
 
   // ===== START =====
